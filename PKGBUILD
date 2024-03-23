@@ -45,7 +45,7 @@ optdepends=(
 source=()
 sha256sums=()
 _url="${url}"
-[[ "" == "true" ]] && \
+[[ "${_offline}" == "true" ]] && \
   _url="file://${HOME}/${_pkgname}"
 [[ "${_git}" == true ]] && \
   makedepends+=(
