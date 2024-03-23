@@ -9,8 +9,7 @@ _py="python"
 _py2="${_py}2"
 _git="false"
 pkgname=bbrightnessctl
-_pkgver="0.0.0.1"
-pkgver="${_pkgver}"
+pkgver="0.0.0.1.1"
 pkgrel=1
 pkgdesc="System-independent brightness control tool"
 arch=(
@@ -29,15 +28,14 @@ depends=(
 )
 [[ "${_os}" == "GNU/Linux" ]] && \
   depends+=(
-    bash
-    pacman
+    "brightnessctl"
   )
 [[ "${_os}" == "Android" ]] && \
   depends+=(
-    termux-api
+    "termux-api"
   )
 makedepends=(
-  make
+  "make"
 )
 checkdepends=(
 #  shellcheck
@@ -51,10 +49,10 @@ _url="${url}"
   _url="file://${HOME}/${_pkgname}"
 [[ "${_git}" == true ]] && \
   makedepends+=(
-    git
+    "git"
   ) && \
   source+=(
-    "${pkgname}-${pkgver}::git+${_url}"
+    "${pkgname}-${pkgver}::git+${_url}#tag=${pkgver}"
   ) && \
   sha256sums+=(
     SKIP
@@ -64,12 +62,12 @@ _url="${url}"
     "${pkgname}-${pkgver}.tar.gz::${_url}/archive/refs/tags/${pkgver}.tar.gz"
   ) && \
   sha256sums+=(
-    'e3d129110501327631be796d038226353ae73f3775936c7d28d21950062725f8'
+    '75fb58f2e44b3a772244c2cea2ddf4e759353873f4b88dbc6b619e961984fb6c'
   )
 
 package() {
   cd \
-    "${pkgname}-${_pkgver}"
+    "${pkgname}-${pkgver}"
   make \
     DESTDIR="${pkgdir}" \
     install
