@@ -1,0 +1,13 @@
+pkgbase = bbrightnessctl
+	pkgdesc = System-independent brightness control tool
+	pkgver = 0.0.0.1
+	pkgrel = 1
+	url = https://github.com/themartiancompany/bbrightnessctl
+	arch = any
+	license = AGPL3
+	makedepends = make
+	depends = termux-api
+	source = bbrightnessctl-0.0.0.1.tar.gz::https://github.com/themartiancompany/bbrightnessctl/archive/refs/tags/0.0.0.1.tar.gz
+	sha256sums = b8c3c344b5e5934cc1e7cf2a9bf967b679bac18cee98d3499290d14d158a9098
+
+pkgname = bbrightnessctl
