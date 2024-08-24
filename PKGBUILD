@@ -9,7 +9,8 @@ _py="python"
 _py2="${_py}2"
 _git="false"
 pkgname=bbrightnessctl
-pkgver="0.0.0.1.1"
+pkgver="1.0.1"
+_commit="da431b7aad53e9ea094eb3779cfdbf9e034b40f3"
 pkgrel=1
 pkgdesc="System-independent brightness control tool"
 arch=(
@@ -62,7 +63,7 @@ _url="${url}"
     "${pkgname}-${pkgver}.tar.gz::${_url}/archive/refs/tags/${pkgver}.tar.gz"
   ) && \
   sha256sums+=(
-    '75fb58f2e44b3a772244c2cea2ddf4e759353873f4b88dbc6b619e961984fb6c'
+    '7e568b3abfde66dc23b3921832163f7097d1d6a09c1d397d88f4d1243ccf9f87'
   )
 
 package() {
